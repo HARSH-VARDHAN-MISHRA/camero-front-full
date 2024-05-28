@@ -47,7 +47,7 @@ const CategoryProduct = () => {
                         {productData && productData.length > 0 ? (
                             productData.map((item, index) => (
                                 <div className="singleProduct" key={index}>
-                                    <Link to={`/Products/${item._id}`}>
+                                    <Link to={`/Products/${item.productName}/${item._id}`}>
                                         <div className="img">
                                             <img
                                                 loading="lazy"
