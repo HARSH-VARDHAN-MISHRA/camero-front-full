@@ -9,8 +9,8 @@ const CategoryPro = () => {
         try {
 
             const response = await axios.get("https://api.camrosteel.com/api/v1/getAllCategorey")
-            console.log(response.data);
-            setCateg(response.data)
+            console.log("Hey bro",response.data.data);
+            setCateg(response.data.data)
         } catch (error) {
             console.log(error);
         }
@@ -25,13 +25,13 @@ const CategoryPro = () => {
         <section className="categories">
             <div className="container">
                 <div className="category-grid">
-                    {categ.map((item,index)=>(
+                    {categ && categ.map((item,index)=>(
                         <div key={index}>
-                            <Link to={`/ProductBy-Category/${item.category}`} className="sin-cate">
+                            <Link to={`/ProductBy-Category/${item.title}`} className="sin-cate">
                                 <div className="img">
-                                    <img loading="lazy" decoding="async" src={item.image} alt="" />
+                                    <img loading="lazy" decoding="async" src={item.CatImg} alt="" />
                                 </div>
-                                <h4>{item.category}</h4>
+                                <h4>{item.title}</h4>
                             </Link>
                         </div>
                     ))}

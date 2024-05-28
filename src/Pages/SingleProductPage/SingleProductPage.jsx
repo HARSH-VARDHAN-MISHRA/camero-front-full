@@ -6,7 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Subhead from '../../components/Subhead/Subhead';
 const SingleProductPage = () => {
-
+    const { id } = useParams()
+    console.log(id)
     const [singleData, setData] = useState([]);
     const [info, setInfo] = useState("");
     const [sizes, setSize] = useState([]);
@@ -40,7 +41,7 @@ const SingleProductPage = () => {
         }
     }
 
-    const { id } = useParams()
+
     const handleProductData = async () => {
         try {
             const response = await axios.post(`https://api.camrosteel.com/api/v1/single-product/${id}`)
@@ -48,10 +49,10 @@ const SingleProductPage = () => {
 
             setInfo(response.data.data.addInfo)
             setSize(response.data.data.sizes)
-            setImages(response.data.data.images)
-            console.log(images)
+
+
             setData(response.data.data)
-            
+
             if (response.data.data.sizes.length > 0) {
                 setActive(response.data.data.sizes[0]);
             }
@@ -71,7 +72,7 @@ const SingleProductPage = () => {
             const selectedPrice = active.discoPrice;
             const productName = singleData.productName;
             const productId = singleData._id;
-            const image = singleData.images[0].img; // Assuming you have an array of images and you want to save the first one
+            const image = singleData.img; // Assuming you have an array of images and you want to save the first one
 
             // Construct product details object
             const productDetails = {
@@ -132,35 +133,23 @@ const SingleProductPage = () => {
 
         handleProductData();
     }, [id]);
-    useEffect(()=>{
-        handleFilterData();
-    },[singleData])
-
-
-    const [slideImage, setSlideImage] = useState('');
-
-    // Set default image when the component mounts
     useEffect(() => {
-        if (images && images.length > 0) {
-            const imageUrls = images.map((item) => item.img); // Extract image URLs from the images array
-            setSlideImage(imageUrls[0] || 'https://i.ibb.co/pPwsHpx/no-image-icon-23494.png');
-        }
-    }, [images]);
+        handleFilterData();
+    }, [singleData])
 
 
-    const changeImage = (index) => {
-        const mainImage = images[index]?.img || slideImage; // Access image URL at the specified index or fallback to default
-        console.log("first", mainImage);
-        setSlideImage(mainImage);
+    const [slideImage, setSlideImage] = useState(singleData?.img);
+
+    const changeImage = (newImage) => {
+        setSlideImage(newImage);
     };
-
 
 
 
 
     return (
         <>
-            {console.log(filterProductData)}
+            {/* {console.log(filterProductData)} */}
             <ToastContainer />
             <section class="bread">
                 <div class="container">
@@ -178,11 +167,9 @@ const SingleProductPage = () => {
             <section className="container mt-5 product-page">
                 <div className="row">
                     <div className="col-md-5 mb-4">
-                        <div
-                            className="big-img"
-                        >
+                        <div className="big-img">
                             <img
-                                src={slideImage}
+                                src={slideImage ? slideImage : singleData?.img}
                                 onError={(e) => {
                                     e.target.src = 'https://i.ibb.co/pPwsHpx/no-image-icon-23494.png';
                                 }}
@@ -191,23 +178,45 @@ const SingleProductPage = () => {
                                 className="imgd"
                                 decoding="async"
                             />
-
                         </div>
                         <div className='small-img mt-2'>
-                            {images && images.slice(0, 4).map((img, index) => (
-                                <img
-                                    key={index}
-                                    src={img.img}
-                                    onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
-                                    alt={singleData.productName}
-                                    loading='lazy'
-                                    className='imgd'
-                                    decoding='async'
-                                    onMouseMove={() => changeImage(index)} // Call changeImage function with index as argument
-                                />
-                            ))}
+                            <img
+                                src={singleData?.img}
+                                onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
+                                alt={singleData.productName}
+                                loading='lazy'
+                                className='imgd cursor-pointer'
+                                decoding='async'
+                                onMouseOver={() => changeImage(singleData?.img)}
+                            />
+                            <img
+                                src={singleData?.secondImg}
+                                onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
+                                alt={singleData.productName}
+                                loading='lazy'
+                                className='imgd cursor-pointer'
+                                decoding='async'
+                                onMouseOver={() => changeImage(singleData?.secondImg)}
+                            />
+                            <img
+                                src={singleData?.thirdImage}
+                                onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
+                                alt={singleData.productName}
+                                loading='lazy'
+                                className='imgd cursor-pointer'
+                                decoding='async'
+                                onMouseOver={() => changeImage(singleData?.thirdImage)}
+                            />
+                            <img
+                                src={singleData?.fourthImage}
+                                onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
+                                alt={singleData.productName}
+                                loading='lazy'
+                                className='imgd cursor-pointer'
+                                decoding='async'
+                                onMouseOver={() => changeImage(singleData?.fourthImage)}
+                            />
                         </div>
-
                     </div>
                     <div className="col-md-7">
                         <div className="details">
@@ -283,7 +292,7 @@ const SingleProductPage = () => {
                                         <img
                                             loading="lazy"
                                             decoding="async"
-                                            src={itemfil.images[0].img}
+                                            src={itemfil.img}
                                             onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
                                             className="front-img"
                                             alt={itemfil.productName}
@@ -291,7 +300,7 @@ const SingleProductPage = () => {
                                         <img
                                             loading="lazy"
                                             decoding="async"
-                                            src={itemfil.images[1].img}
+                                            src={itemfil.img}
                                             onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
                                             className="back-img"
                                             alt={itemfil.productName}

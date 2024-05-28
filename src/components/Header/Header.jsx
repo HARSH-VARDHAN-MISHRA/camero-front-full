@@ -31,7 +31,7 @@ const Header = () => {
     try {
       const response = await axios.get("https://api.camrosteel.com/api/v1/getAllCategorey")
       console.log(response.data);
-      setCateg(response.data)
+      setCateg(response.data.data)
     } catch (error) {
       console.log(error);
     }
@@ -145,7 +145,7 @@ const Header = () => {
             <li><Link onClick={handleCloseBar} to="/categories">Shop By Categories <i class="fa-solid fa-arrow-right"></i></Link></li>
 
             {categ.map((item, index) => (
-              <li key={index}><Link onClick={handleCloseBar} to={`/ProductBy-Category/${item.category}`}>{item.category} <i class="fa-solid fa-arrow-right"></i></Link></li>
+              <li key={index}><a onClick={handleCloseBar} href={`/ProductBy-Category/${item.title}`}>{item.title} <i class="fa-solid fa-arrow-right"></i></a></li>
             ))}
 
 

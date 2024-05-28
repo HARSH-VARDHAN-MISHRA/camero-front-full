@@ -62,7 +62,7 @@ const SearchByName = () => {
                                             <img
                                                 loading="lazy"
                                                 decoding="async"
-                                                src={item.images[0].img}
+                                                src={item.img}
                                                 onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
                                                 className="front-img"
                                                 alt={item.productName}
@@ -70,7 +70,7 @@ const SearchByName = () => {
                                             <img
                                                 loading="lazy"
                                                 decoding="async"
-                                                src={item.images[1].img}
+                                                src={item.img}
                                                 onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
                                                 className="back-img"
                                                 alt={item.productName}
