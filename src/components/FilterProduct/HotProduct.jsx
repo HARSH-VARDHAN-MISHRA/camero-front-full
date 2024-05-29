@@ -27,7 +27,7 @@ const HotProduct = () => {
                     <div className="grid-4">
                         {productData && productData.slice(0, showAll ? productData.length : 8).map((item, index) => (
                             <div className="singleProduct" key={index}>
-                                <Link to={`/Products/${item.productName}/${item._id}`}>
+                                <Link to={`/Products/${item._id}`}>
                                     <div className="img">
                                         <img
                                             loading="lazy"
