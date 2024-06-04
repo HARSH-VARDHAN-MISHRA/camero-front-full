@@ -123,7 +123,7 @@ const Header = () => {
 
             <Link  onClick={handleCartOpen} className="cart icon">
               <i class="fa-solid fa-cart-shopping"></i>
-              <span className='cart-numb'>1</span>
+              <span className='cart-numb'></span>
             </Link>
             <div className="bar icon" onClick={handleOpenBar}>
               <i class="fa-solid fa-bars"></i>
