@@ -16,12 +16,14 @@ const Signin = () => {
         });
       }, []);
     const [loading,setLoading] = useState(false)
+
     const [formData,setFormData] = useState({
         Name:"",
         ContactNumber:"",
         Email:"",
         Password: ""
     })
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         let newValue = value;
@@ -48,14 +50,13 @@ const Signin = () => {
         try{
             const response = await axios.post("https://api.camrosteel.com/api/v1/Register",formData)
             console.log(response.data);
-            toast.success('Sign in Successfully !!')
+            toast.success('OTP Send Successfully !!')
             setLoading(false)
-            window.location.href="/login"
+            window.location.href=`/sign-up/confirm-account/${formData.Email}`
         }
         catch(err){
             // console.log(err.response.data.message);
             toast.error(err.response.data.message)
-
             setLoading(false)
 
         }finally{
@@ -65,6 +66,9 @@ const Signin = () => {
             
         
     }
+
+    
+
   return (
     <>
     <ToastContainer />
@@ -85,7 +89,8 @@ const Signin = () => {
                         <div className="form">
                             <h3>Sign Up Account </h3>
 
-                            <form >
+                            <form>
+
                                 <input required type="text" name="Name" onChange={handleChange} value={formData.Name} placeholder='Name' />
                                 <input required type="number" name="ContactNumber" onChange={handleChange} value={formData.ContactNumber} placeholder='Mobile Number' />
                                 <input required type="email" name="Email" onChange={handleChange} value={formData.Email} placeholder='Email Id' />
@@ -101,6 +106,7 @@ const Signin = () => {
                                 </div>
 
                                 <input onClick={handleSubmit} type="submit" value="SIGN IN " />
+                                                                
                             </form>
                         </div>
                     </div>

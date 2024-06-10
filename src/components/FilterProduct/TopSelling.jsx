@@ -33,7 +33,7 @@ const TopSelling = () => {
                                     <img
                                             loading="lazy"
                                             decoding="async"
-                                            src={item.img}
+                                            src={item.secondImg}
                                             onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
                                             className="front-img"
                                             alt={item.productName}
@@ -41,7 +41,7 @@ const TopSelling = () => {
                                         <img
                                             loading="lazy"
                                             decoding="async"
-                                            src={item.secondImg}
+                                            src={item.img}
                                             onError={(e) => { e.target.src = "https://i.ibb.co/pPwsHpx/no-image-icon-23494.png" }}
                                             className="back-img"
                                             alt={item.productName}

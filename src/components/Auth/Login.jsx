@@ -31,30 +31,26 @@ const Login = () => {
 
     const handleSubmit = async (event) => {
         setLoading(true)
-        event.preventDefault()
+        event.preventDefault();
         try {
             const response = await axios.post("https://api.camrosteel.com/api/v1/Login", formData)
             console.log(response.data);
             toast.success('Login SuccessFull')
             sessionStorage.setItem('token', response.data.token)
             sessionStorage.setItem('user', JSON.stringify(response.data.login))
-            if(CartItems.length > 0){
-                window.location.href="/Make-Order-Complete"
-            }else{
-                window.location.href = "/"
-            }
-
-            setLoading(false)
+            setLoading(false);
+            window.location.href="/"
         }
         catch (err) {
-            console.log(err.response.data.
-                message
-
-            );
-            toast.error(err.response.data.
-                message)
-
-            setLoading(false)
+            if (err.response && err.response.data) {
+                console.log(err.response.data.message);
+                toast.error(err.response.data.message);
+            } else {
+                console.log(err.message);  // Fallback to the error's message if no response
+                toast.error('An unexpected error occurred');
+            }
+        
+            setLoading(false);
 
         }
     }

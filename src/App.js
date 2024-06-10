@@ -20,6 +20,8 @@ import OrderConfirm from './Pages/orderConfirm/OrderConfirm';
 import OrderFailPage from './Pages/orderConfirm/OrderFail';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import ShopPage from './Pages/ShopPage/ShopPage';
+import ContactPage from './Pages/ContactPage/ContactPage';
+import OtpSignUp from './components/Auth/OtpSignUp';
 
 function App() {
   return (
@@ -32,8 +34,9 @@ function App() {
 
           {/* ---- Authentication ----  */}
           <Route path='/login' element={<Login />} />
-          <Route path='/sign-up' element={<Signin />} />
           <Route path='/login/forget-password' element={<ForgetPassword />} />
+          <Route path='/sign-up' element={<Signin />} />
+          <Route path='/sign-up/confirm-account/:email' element={<OtpSignUp />} />
 
           <Route path='/Products/:name/:id' element={<SingleProductPage />} />
           <Route path='/ProductBy-Category/:name' element={<CategoryProduct />} />
@@ -54,6 +57,7 @@ function App() {
           <Route path='/privacy-policy' element={<PrivcayAndPolicy />} />
           <Route path='/return-and-refund-policy' element={<ReturnAndRefund />} />
           <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/contact-us' element={<ContactPage />} />
           
         </Routes>
         <Footer/>

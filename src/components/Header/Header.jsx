@@ -78,6 +78,14 @@ const Header = () => {
   const User = sessionStorage.getItem("user")
   const user = JSON.parse(User)
 
+  // ------ cart Products ----
+  const cartItems = JSON.parse(sessionStorage.getItem('cart'));
+  const cartLength = cartItems ? cartItems.length : 0;
+
+console.log(`Number of items in cart: ${cartLength}`);
+
+  // console.log(cartLength)
+
   return (
     <>
       <header className={fixedHeader ? 'fixed-top' : ''}>
@@ -123,7 +131,7 @@ const Header = () => {
 
             <Link  onClick={handleCartOpen} className="cart icon">
               <i class="fa-solid fa-cart-shopping"></i>
-              <span className='cart-numb'></span>
+              <span className='cart-numb'>{cartLength}</span>
             </Link>
             <div className="bar icon" onClick={handleOpenBar}>
               <i class="fa-solid fa-bars"></i>
