@@ -117,7 +117,7 @@ const Footer = () => {
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/categories">Our Categories</Link></li>
-                <li><Link to="/cart">Cart</Link></li>
+                {/* <li><Link to="/cart">Cart</Link></li> */}
                 <li><Link to="/contact-us">Contact Us</Link></li>
 
               </ul>
