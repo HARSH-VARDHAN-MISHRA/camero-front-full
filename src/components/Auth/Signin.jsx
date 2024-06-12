@@ -50,14 +50,14 @@ const Signin = () => {
         try{
             const response = await axios.post("https://api.camrosteel.com/api/v1/Register",formData)
             console.log(response.data);
-            toast.success('OTP Send Successfully !!')
             setLoading(false)
+            toast.success('OTP Send Successfully !!')
             window.location.href=`/sign-up/confirm-account/${formData.Email}`
         }
         catch(err){
             // console.log(err.response.data.message);
-            toast.error(err.response.data.message)
             setLoading(false)
+            toast.error(err.response.data.message)
 
         }finally{
 
@@ -80,7 +80,7 @@ const Signin = () => {
                     <div className="col-md-6 d-none d-md-block p-0 img-relative">
                         <img src={bg} className=''  alt="" />
 
-                        <div className="img-absolute ">
+                        <div className="img-absolute">
                             <h2>Welcome to <br /> Camro </h2>
                             <p></p>
                         </div>

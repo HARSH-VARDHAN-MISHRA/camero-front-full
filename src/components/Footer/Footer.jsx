@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="sin"><a href="https://www.instagram.com/camrosteel?igsh=NmtrZGY3Zms2b2N6" target="_blank" className="icon insta"><i className="fa-brands fa-instagram"></i></a></div>
         <div className="sin"><a href="https://www.facebook.com/CamroSteels?mibextid=ZbWKwL" target="_blank" className="icon facebook"><i className="fa-brands fa-square-facebook"></i></a></div>
         <div className="sin"><a href="https://youtube.com/@utensil_camrosteel?si=Gym2MWKq5WQLtGj8" target="_blank" className="icon youtube"><i className="fa-brands fa-youtube"></i></a></div>
-        <div className="sin what"><a href="https://api.whatsapp.com/send?phone=919560436691" target="_blank" className="icon whatsapp"><i className="fa-brands fa-whatsapp"></i></a></div>
+        <div className="sin what"><a href="https://api.whatsapp.com/send?phone=918595722922" target="_blank" className="icon whatsapp"><i className="fa-brands fa-whatsapp"></i></a></div>
       </div>
 
       <section className="upper-foot my-4">
