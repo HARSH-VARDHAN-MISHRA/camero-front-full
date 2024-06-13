@@ -8,6 +8,7 @@ import TopSelling from '../../components/FilterProduct/TopSelling'
 import CategoryPro from '../../components/CategoryPro/CategoryPro'
 
 import bn1 from './bn1.jpg'
+import Testimonial from '../../components/Testimonial/Testimonial'
 
 const HomePage = () => {
   return (
@@ -27,6 +28,8 @@ const HomePage = () => {
         <TrendingProduct/>
         <Subhead title="Hot Products" para="Best of Health & Convenience." />
         <HotProduct/>
+
+        <Testimonial/>
     </>
   )
 }
