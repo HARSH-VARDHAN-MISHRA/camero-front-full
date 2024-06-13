@@ -5,20 +5,21 @@ import p2 from './p2.png';
 import p3 from './p3.webp';
 
 const testimonials = [
-    {
-        img: p1,
-        name: 'Anushree Sain',
-        review: '“They have a wide range of digital courses which are apt as per the current job market. The courses were explained really well & would recommend to job seekers & people in current workforces for upskilling themselves.”'
-    },
+    
     {
         img: p2,
         name: 'Mayank Johri',
-        review: '“Quite impactful and affordable digital marketing classes in Gurgaon. Their courses are based on the needs of current industry standards. This knowledge also proves out to be very helpful in getting a job as well as handling the digital media of your own business.”'
+        review: 'I love the stainless steel pressure cooker from Camro Utensils. It’s durable and easy to clean.'
+    },
+    {
+        img: p1,
+        name: 'Anushree Sain',
+        review: 'The Triply Pressure Cookers are a game-changer! Cooking is so much faster and efficient now.'
     },
     {
         img: p3,
         name: 'Rahul Sharma',
-        review: '“The quality of the utensils is top-notch. I\'ve been using their products for a year now, and I am very satisfied with the durability and performance. Highly recommend Camro Utensils to everyone!”'
+        review: 'The Triply Kadhai is my favorite cookware. It heats evenly and the food tastes amazing.'
     }
 ];
 
