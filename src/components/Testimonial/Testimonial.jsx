@@ -1,19 +1,19 @@
 import React from 'react';
 import './testimonial.css';
-import p1 from './p1.webp';
-import p2 from './p2.png';
-import p3 from './p3.webp';
+import p1 from './p1.jpeg';
+import p2 from './p2.jpeg';
+import p3 from './p3.jpeg';
 
 const testimonials = [
     
     {
-        img: p2,
+        img: p1,
         name: 'Mayank Johri',
         review: 'I love the stainless steel pressure cooker from Camro Utensils. It’s durable and easy to clean.'
     },
     {
-        img: p1,
-        name: 'Anushree Sain',
+        img: p2,
+        name: 'Harsh Vardhan',
         review: 'The Triply Pressure Cookers are a game-changer! Cooking is so much faster and efficient now.'
     },
     {
