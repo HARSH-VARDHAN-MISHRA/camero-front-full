@@ -20,6 +20,10 @@ const Sidecart = ({ cartOpen, handleCartClose }) => {
     };
 
     const handleQuantityChange = (index, newQuantity) => {
+        if (newQuantity < 1) {
+            newQuantity = 1; // Prevent quantity from going below 1
+        }
+        
         const updatedCart = [...cart];
         updatedCart[index].quantity = newQuantity;
         setCart(updatedCart);
