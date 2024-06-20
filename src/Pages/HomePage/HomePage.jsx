@@ -25,6 +25,7 @@ const HomePage = () => {
         </section>
         <Subhead title="New Arrivals" para="Best of Health & Convenience." />
         <NewArrival/>
+        <Subhead title="Trending Products" para="Discover what's hot in every home!" />
         <TrendingProduct/>
         <Subhead title="Hot Products" para="Best of Health & Convenience." />
         <HotProduct/>
