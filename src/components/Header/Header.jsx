@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './Header.css'
-import logo from '../../Assets/logo.png'
+// import logo from '../../Assets/logo.png'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Sidecart from '../sidecart/Sidecart'
+import newLogo from './newlogo.png'
 
 const Header = () => {
   const [sidebar, setSidebar] = useState(false)
   const [fixedHeader, setFixedHeader] = useState(false);
-  
+
 
 
   const handleOpenBar = () => {
@@ -65,7 +66,7 @@ const Header = () => {
 
   useEffect(() => {
     handleCategories();
-    
+
     // -- To fix the header at top -- 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -82,7 +83,7 @@ const Header = () => {
   const cartItems = JSON.parse(sessionStorage.getItem('cart'));
   const cartLength = cartItems ? cartItems.length : 0;
 
-console.log(`Number of items in cart: ${cartLength}`);
+  console.log(`Number of items in cart: ${cartLength}`);
 
   // console.log(cartLength)
 
@@ -94,9 +95,15 @@ console.log(`Number of items in cart: ${cartLength}`);
         </div>
 
         <div className="header-navbar">
+          <div className='flex flex-logo'>
+              <div className="bar icon" onClick={handleOpenBar}>
+                <i class="fa-solid fa-bars"></i>
+              </div>
 
-          <div className="logo">
-            <Link to="/" ><img src={logo} alt="logo" /></Link>
+            <div className="logo">
+              <Link to="/" ><img src={newLogo} alt="logo" /></Link>
+            </div>
+
           </div>
 
 
@@ -112,35 +119,131 @@ console.log(`Number of items in cart: ${cartLength}`);
 
           <div className="icons">
             {token ? (
-                <Link to="/profile" className="cart icon">
-                  <i class="fa-regular fa-user"></i>
-                </Link>
-            ):(
+              <Link to="/profile" className="cart icon">
+                <i class="fa-regular fa-user"></i>
+              </Link>
+            ) : (
               <>
                 <Link to="/login" className="cart icon">
                   <div className="cre">Login</div>
-                </Link> 
-                <span style={{color:"red"}}>|</span>
+                </Link>
+                <span style={{ color: "red" }}>|</span>
                 {/* <Link to="/sign-up" className="cart icon">
                   <div className="cre">Create Account</div>
                 </Link> */}
               </>
             )}
 
-            
 
-            <Link  onClick={handleCartOpen} className="cart icon">
+
+            <Link onClick={handleCartOpen} className="cart icon">
               <i class="fa-solid fa-cart-shopping"></i>
               <span className='cart-numb'>{cartLength}</span>
             </Link>
-            <div className="bar icon" onClick={handleOpenBar}>
-              <i class="fa-solid fa-bars"></i>
-            </div>
+            
 
           </div>
 
         </div>
       </header>
+
+      {/* ---------------------------------  */}
+      <div className="head-links">
+        <nav class="main-menu">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li class="menu-item-has-children">
+              <Link to="#">Pressure Cooker</Link>
+              <ul class="sub-menu">
+                <li><Link>Triply Pressure Cooker</Link></li>
+                <li><Link>Triply Hammered Pressure Cooker</Link></li>
+                <li><Link>Stainless Steel Pressure Cooker</Link></li>
+                <li><Link>Genuine Accessories</Link></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <Link to="#">Cast Iron Cookware</Link>
+              <ul class="sub-menu">
+                <li><Link>Kadai</Link></li>
+                <li><Link>Tawa</Link></li>
+                <li><Link>Grill Pan</Link></li>
+                <li><Link>Fry Pan</Link></li>
+                <li><Link>Paniyaram/Appe Pan </Link></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <Link to="#">Triply Cookware</Link>
+              <ul class="sub-menu">
+                <li><Link>All Triply Cookware </Link></li>
+                <li><Link>Kadai</Link></li>
+                <li><Link>Tasla</Link></li>
+                <li><Link>Tope</Link></li>
+                <li><Link>Fry Pan</Link></li>
+                <li><Link>Sauce Pan/Milk pan</Link></li>
+                <li><Link>Tadka Pan</Link></li>
+                <li><Link>Serving Pot</Link></li>
+                <li><Link>Wokpan</Link></li>
+                <li><Link>Tawa</Link></li>
+
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <Link to="#">Stainless steel-cookware</Link>
+              <ul class="sub-menu">
+                <li><Link>Steel Round Kadai</Link></li>
+                <li><Link>Round Tadka pan </Link></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <Link to="#">Induction Bottom Cookware</Link>
+              <ul class="sub-menu">
+                <li><Link>Kadai </Link></li>
+                <li><Link>Tope</Link></li>
+                <li><Link>Fry Pan</Link></li>
+                <li><Link>Sauce Pan/Milk pan</Link></li>
+                <li><Link>Serving Pot</Link></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <Link to="#">Non-Stick Cookware</Link>
+              <ul class="sub-menu">
+                <li><Link>Kadai</Link></li>
+                <li><Link>Fry Pan</Link></li>
+                <li><Link>Sauce pan</Link></li>
+
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <Link to="#">Triply Honeycomb Cookware</Link>
+              <ul class="sub-menu">
+                <li><Link>Kadai</Link></li>
+                <li><Link>Tasla</Link></li>
+                <li><Link>Fry Pan</Link></li>
+                <li><Link>Tawa</Link></li>
+
+
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <Link to="#">Combo offers</Link>
+              <ul class="sub-menu">
+                <li><Link>Pressure-cooker Combo</Link></li>
+                <li><Link>Kadai Combo</Link></li>
+                <li><Link>Fry Pan Combo</Link></li>
+                <li><Link>Sauce pan Combo</Link></li>
+                <li><Link>Tope Combo</Link></li>
+                <li><Link>Dinner Thali Combo</Link></li>
+
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+
+      {/* ---------------------------------  */}
+
 
       <div className={`side-navbar ${sidebar ? "active" : ""}`}>
         <div className="closeSidebar" onClick={handleCloseBar}>
@@ -160,20 +263,20 @@ console.log(`Number of items in cart: ${cartLength}`);
           </ul>
 
           {token ? (
-              <div className="bottom-nav">
-                <div className="profile">
-                  <div className="detail">
-                    <h5>{user.Name}</h5>
-                    <Link to="/profile" onClick={handleCloseBar}>View Profile</Link>
-                  </div>
+            <div className="bottom-nav">
+              <div className="profile">
+                <div className="detail">
+                  <h5>{user.Name}</h5>
+                  <Link to="/profile" onClick={handleCloseBar}>View Profile</Link>
                 </div>
-
               </div>
-            ):(
-              ""
-            )}
-            
-            {/* <div className="bottom-nav">
+
+            </div>
+          ) : (
+            ""
+          )}
+
+          {/* <div className="bottom-nav">
               <div className="profile">
                 <div className="pro-img">
                   <img src="https://avatars.githubusercontent.com/u/122715402?v=4" alt="" />

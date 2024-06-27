@@ -9,6 +9,7 @@ import CategoryPro from '../../components/CategoryPro/CategoryPro'
 
 import bn1 from './bn1.jpg'
 import Testimonial from '../../components/Testimonial/Testimonial'
+import Faq from '../../components/Faq/Faq'
 
 const HomePage = () => {
   return (
@@ -30,6 +31,7 @@ const HomePage = () => {
         <Subhead title="Hot Products" para="Best of Health & Convenience." />
         <HotProduct/>
 
+        <Faq/>
         <Testimonial/>
     </>
   )

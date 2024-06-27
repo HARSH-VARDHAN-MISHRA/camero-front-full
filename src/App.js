@@ -22,6 +22,8 @@ import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import ShopPage from './Pages/ShopPage/ShopPage';
 import ContactPage from './Pages/ContactPage/ContactPage';
 import OtpSignUp from './components/Auth/OtpSignUp';
+import AboutPage from './Pages/AboutPage/AboutPage';
+import FaqPage from './Pages/FaqPage/FaqPage';
 
 function App() {
   return (
@@ -58,6 +60,9 @@ function App() {
           <Route path='/return-and-refund-policy' element={<ReturnAndRefund />} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/contact-us' element={<ContactPage />} />
+
+          <Route path='/about-us' element={<AboutPage />} />
+          <Route path='/faqs' element={<FaqPage />} />
           
         </Routes>
         <Footer/>

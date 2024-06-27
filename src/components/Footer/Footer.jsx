@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import logo from '../../Assets/logo.png'
+import logo from '../../Assets/newlogo.png'
 import { Link } from 'react-router-dom'
 
 import ce from './ce.png';
@@ -117,7 +117,8 @@ const Footer = () => {
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/categories">Our Categories</Link></li>
-                {/* <li><Link to="/cart">Cart</Link></li> */}
+                <li><Link to="/about-us">About us</Link></li>
+                <li><Link to="/faqs">FAQ's</Link></li>
                 <li><Link to="/contact-us">Contact Us</Link></li>
 
               </ul>
