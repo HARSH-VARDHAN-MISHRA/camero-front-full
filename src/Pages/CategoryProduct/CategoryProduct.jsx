@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
+import MetaTag from '../../components/Meta/MetaTag';
 const CategoryProduct = () => {
     useEffect(() => {
         window.scrollTo({
@@ -26,6 +27,12 @@ const CategoryProduct = () => {
 
     return (
         <>
+
+            <MetaTag
+                title={`${name} Products - CAMRO Products`}
+                description={`Explore ${name} products offered by CAMRO Products. Discover top-tier kitchenware appliances and enhance your cooking experience. Shop now!`}
+                keyword={`CAMRO Products, ${name} products, kitchenware appliances, cookware`}
+            />
 
             <section class="bread">
                 <div class="container">

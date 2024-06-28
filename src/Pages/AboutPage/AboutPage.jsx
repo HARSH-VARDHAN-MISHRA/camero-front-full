@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './AboutPage.css'
+import MetaTag from '../../components/Meta/MetaTag';
 
 const AboutPage = () => {
   useEffect(() => {
@@ -11,6 +12,11 @@ const AboutPage = () => {
   }, []);
   return (
     <>
+    <MetaTag
+        title="About Us - Camrosteel"
+        description="Welcome to CAMRO Products, one of the fastest growing manufacturers of stainless steel kitchenware and cookware. Discover our commitment to quality, innovation, and customer satisfaction."
+        keyword="CAMRO Products, stainless steel kitchenware, cookware manufacturer, quality kitchen products"
+      />
       <section class="bread mb-5">
         <div class="container">
           <nav aria-label="breadcrumb">

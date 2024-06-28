@@ -35,7 +35,7 @@ const ContactPage = () => {
                 <ul className="list-unstyled">
                   <li> Email: <a href="mailto:camrocookerpvtltd@gmail.com" target="_blank">camrocookerpvtltd@gmail.com</a></li>
                   <li> Phone: <a href="tel:+918595722922">+91-8595722922</a></li>
-                  <li> Address: <a href="javascript:void(0)">C-60/2 Wazirpur Industrial India Delhi-110052</a></li>
+                  <li> Address: <a href="javascript:void(0)">C-60/2, Wazirpur Industrial Area Delhi-110052</a></li>
                 </ul>
                 <div className="social-icons mb-3">
                   <a href="https://www.facebook.com/CamroSteels?mibextid=ZbWKwL" target="_blank" ><i className="fab fa-facebook-f"></i></a>

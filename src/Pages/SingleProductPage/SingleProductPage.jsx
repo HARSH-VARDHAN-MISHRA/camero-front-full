@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Subhead from '../../components/Subhead/Subhead';
+import MetaTag from '../../components/Meta/MetaTag';
 const SingleProductPage = () => {
     const { id } = useParams()
     console.log(id)
@@ -144,12 +145,21 @@ const SingleProductPage = () => {
         setSlideImage(newImage);
     };
 
-
+    if (!singleData) {
+        return <div>Loading...</div>; // or a loader component while data is fetched
+    }
 
 
     return (
         <>
-            {/* {console.log(filterProductData)} */}
+        {singleData && (
+                <MetaTag
+                    title={`${singleData.productName} - CAMRO Products`}
+                    description={`Explore ${singleData.productName} from CAMRO Products. Find details, pricing, and more. Shop now!`}
+                    keyword={`CAMRO Products, ${singleData.productName}, kitchenware, cookware`}
+                />
+            )}
+
             <ToastContainer />
             <section class="bread">
                 <div class="container">

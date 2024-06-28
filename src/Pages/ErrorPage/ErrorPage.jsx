@@ -1,10 +1,16 @@
 import React from 'react'
 import error from "./404.png"
 import { Link } from 'react-router-dom'
+import MetaTag from '../../components/Meta/MetaTag'
 
 const ErrorPage = () => {
     return (
         <>
+        <MetaTag
+                title="404 - Not Found - Camrosteel"
+                description="Sorry, the page you are looking for could not be found. Explore Camrosteel for top-quality kitchenware and cookware."
+                keyword="404, Not Found, Camrosteel, kitchenware, cookware"
+            />
             <section className="min-vh-100 d-flex align-items-center bg-gray-100">
                 <div className="container">
                     <div className="row justify-content-center">

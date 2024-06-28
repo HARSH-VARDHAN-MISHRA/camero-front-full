@@ -1,43 +1,28 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import MetaTag from '../../components/Meta/MetaTag';
 
 const FaqPage = () => {
 
     const faqs = [
         {
-          question: "What is CAMRO Products?",
-          answer: "CAMRO Products is one of the fastest growing manufacturers of stainless steel kitchenware and a full range of cookware, known for its high-quality materials and innovative designs."
+            question: "What is the general return policy at The Camro Steel?",
+            answer: "It is a 7-day return policy. We offer you complete peace of mind while ordering at The Camro Steel – you can return all items within 7 days of receipt of goods. Please ensure that the product is unused & the tags, boxes / other packaging is intact. We care about your safety and hygiene, and we're happy to accept returns on unused cookware products. To make sure our products stay clean and safe for everyone, we can only accept items that haven't been used. You have 7 days from delivery to return any unused items. This policy helps keep all our products in perfect condition. We hope you understand and cooperate with us on this. If you have any questions or need more information, our friendly customer service team is ready to help. For pre-paid orders, we will reverse the payment to the source. In case of COD, we process a NEFT payment in the registered name of the customer."
         },
         {
-          question: "Where are CAMRO Products manufactured?",
-          answer: "Our products are manufactured in a facility spanning a total area of 40,000 square feet, utilizing both handcrafted and automated processes to ensure the highest quality."
+            question: "What should I do if I receive a damaged item, wrong product, or missing units in my order?",
+            answer: "If an item is damaged, missing, or incorrect, please send a photo of the outer packaging and products received to our customer care. Reach us at camrocookerpvtltd@gmail.com or call us on 85957 22922 within 7 days of receipt of the product. We will issue either a full refund or send the correct item in exchange, as per your request."
         },
         {
-          question: "What materials are used in CAMRO Products?",
-          answer: "We use the highest quality raw materials combined with the best handcrafting and automation to create long-lasting, ergonomic, and design-oriented products."
+            question: "Can I cancel the order?",
+            answer: "You can cancel an order within 3 hours of placing the order. You can simply refuse to accept the parcel at the time of delivery as orders will not be returned once delivered."
         },
         {
-          question: "How can I contact CAMRO Products for support?",
-          answer: "You can contact our support team via email at support@camroproducts.com or call us at (123) 456-7890. We are dedicated to providing exceptional customer service."
-        },
-        {
-          question: "What is the warranty period for CAMRO Products?",
-          answer: "CAMRO Products come with a one-year warranty from the date of purchase, covering manufacturing defects and quality issues."
-        },
-        {
-          question: "Are CAMRO Products dishwasher safe?",
-          answer: "Yes, most of our stainless steel kitchenware and cookware products are dishwasher safe. Please refer to the product manual for specific care instructions."
-        },
-        {
-          question: "Do CAMRO Products use non-stick coatings?",
-          answer: "Some of our cookware products feature high-quality non-stick coatings for easy cooking and cleaning. Please check the product details for more information."
-        },
-        {
-          question: "Can I find CAMRO Products in retail stores?",
-          answer: "Yes, CAMRO Products are available in various retail stores nationwide. You can also purchase our products online through our official website and authorized retailers."
+            question: "Will I get a refund if I don't get a replacement/exchange as requested?",
+            answer: "Replacements/exchanges are subject to the availability of stock with the seller. If the product is out of stock or a replacement/exchange cannot be issued, a full refund will be provided upon successful pickup of the product at no extra cost."
         }
-      ];
-
+    ];
+    
     useEffect(() => {
         window.scrollTo({
             top: 0,
@@ -46,6 +31,11 @@ const FaqPage = () => {
     }, []);
     return (
         <>
+        <MetaTag
+                title="Frequently Asked Questions - Camrosteel"
+                description="Find answers to frequently asked questions about Camrosteel products. Learn about our materials, warranty, support, and more."
+                keyword="Camrosteel, frequently asked questions, kitchenware, cookware, stainless steel"
+            />
             <section class="bread mb-5">
                 <div class="container">
                     <nav aria-label="breadcrumb">

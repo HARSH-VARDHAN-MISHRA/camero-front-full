@@ -153,6 +153,7 @@ footer .copyright a{
 }
 .upper-foot h5{
     color: var(--color-main);
+    font-size: 1rem;
     text-transform: uppercase;
 }
 .upper-foot .imgs{
@@ -162,7 +163,7 @@ footer .copyright a{
     gap: 1rem;
 }
 .upper-foot .imgs img{
-    height: 70px;
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
@@ -170,7 +171,7 @@ footer .copyright a{
     justify-content: end;
 }
 .upper-foot .end .imgs img{
-    height: 50px;
+    height: 35px;
 }
 .upper-foot .end h5{
     text-align: end;
@@ -188,7 +189,7 @@ footer .copyright a{
         justify-content: start;
     }
     .upper-foot .end .imgs img{
-        height: 50px;
+        height: 30px;
     }
     .upper-foot .end h5{
         text-align: start;
@@ -196,11 +197,8 @@ footer .copyright a{
 }
 
 @media only screen and (max-width: 500px){
-    .upper-foot .imgs img {
-        height: 3rem;
-    }
     .upper-foot .end .imgs img {
-        height: 40px;
+        height: 30px;
     }
 }
 

@@ -85,7 +85,7 @@ const Footer = () => {
                 {countries && countries.map((county, couIndex) => (
                   <div key={couIndex} className='text-center'>
                     <img  src={county.countryImg} alt="certificate" />
-                    <h6 className='pt-2'>{county.countryName}</h6>
+                    {/* <h6 className='pt-2'>{county.countryName}</h6> */}
                   </div>
                 ))}
               </div>
@@ -102,7 +102,7 @@ const Footer = () => {
               <div className="logo"><img loading="lazy" decoding="async" src={logo} alt="logo" /></div>
               <p>
                 <strong>Address :</strong>
-                <a href="javascript:void(0)">C-60/2 Wazirpur Industrial India Delhi-110052</a>
+                <a href="javascript:void(0)">C-60/2, Wazirpur Industrial Area Delhi-110052</a>
               </p>
               <p>
                 <strong>Contact Us :</strong>
