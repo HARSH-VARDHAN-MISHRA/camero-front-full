@@ -159,6 +159,7 @@ const Header = () => {
                 <li><Link>Triply Hammered Pressure Cooker</Link></li>
                 <li><Link>Stainless Steel Pressure Cooker</Link></li>
                 <li><Link>Genuine Accessories</Link></li>
+
               </ul>
             </li>
             <li class="menu-item-has-children">
@@ -188,42 +189,21 @@ const Header = () => {
               </ul>
             </li>
             <li class="menu-item-has-children">
-              <Link to="#">Stainless steel-cookware</Link>
+              <Link to="#">Steel Cookware</Link>
               <ul class="sub-menu">
-                <li><Link>Steel Round Kadai</Link></li>
-                <li><Link>Round Tadka pan </Link></li>
-              </ul>
-            </li>
-            <li class="menu-item-has-children">
-              <Link to="#">Induction Bottom Cookware</Link>
-              <ul class="sub-menu">
-                <li><Link>Kadai </Link></li>
+                <li><Link>All Steel Cookware </Link></li>
+                <li><Link>Kadai</Link></li>
+                <li><Link>Tadka pan </Link></li>
                 <li><Link>Tope</Link></li>
                 <li><Link>Fry Pan</Link></li>
                 <li><Link>Sauce Pan/Milk pan</Link></li>
                 <li><Link>Serving Pot</Link></li>
-              </ul>
-            </li>
-            <li class="menu-item-has-children">
-              <Link to="#">Non-Stick Cookware</Link>
-              <ul class="sub-menu">
-                <li><Link>Kadai</Link></li>
-                <li><Link>Fry Pan</Link></li>
-                <li><Link>Sauce pan</Link></li>
-
-              </ul>
-            </li>
-            <li class="menu-item-has-children">
-              <Link to="#">Triply Honeycomb Cookware</Link>
-              <ul class="sub-menu">
-                <li><Link>Kadai</Link></li>
                 <li><Link>Tasla</Link></li>
-                <li><Link>Fry Pan</Link></li>
                 <li><Link>Tawa</Link></li>
 
-
               </ul>
             </li>
+            
             <li class="menu-item-has-children">
               <Link to="#">Combo offers</Link>
               <ul class="sub-menu">

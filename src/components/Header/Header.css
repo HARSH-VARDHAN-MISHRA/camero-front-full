@@ -405,6 +405,9 @@ header .icons .icon .cart-numb{
         padding: 18px 20px;
         left: -27px;
     }
+    .head-links{
+        display: none;
+    }
 }
 
 
