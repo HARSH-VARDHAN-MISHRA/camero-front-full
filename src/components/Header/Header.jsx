@@ -40,7 +40,7 @@ const Header = () => {
   }
   const handleMainCategories = async () => {
     try {
-      const response = await axios.get("http://localhost:5002/api/v1/get-All-Main-Categories");
+      const response = await axios.get("https://api.camrosteel.com/api/v1/get-All-Main-Categories");
       console.log("Main :", response.data.data);
       setMainCateg(response.data.data)
     } catch (error) {
