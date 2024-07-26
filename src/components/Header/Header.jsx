@@ -28,11 +28,21 @@ const Header = () => {
   };
 
   const [categ, setCateg] = useState([])
+  const [mainCateg, setMainCateg] = useState([])
   const handleCategories = async () => {
     try {
       const response = await axios.get("https://api.camrosteel.com/api/v1/getAllCategorey")
       console.log(response.data);
       setCateg(response.data.data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const handleMainCategories = async () => {
+    try {
+      const response = await axios.get("http://localhost:5002/api/v1/get-All-Main-Categories");
+      console.log("Main :", response.data.data);
+      setMainCateg(response.data.data)
     } catch (error) {
       console.log(error);
     }
@@ -66,6 +76,7 @@ const Header = () => {
 
   useEffect(() => {
     handleCategories();
+    handleMainCategories();
 
     // -- To fix the header at top -- 
     window.addEventListener('scroll', handleScroll);
@@ -96,9 +107,9 @@ const Header = () => {
 
         <div className="header-navbar">
           <div className='flex flex-logo'>
-              <div className="bar icon" onClick={handleOpenBar}>
-                <i class="fa-solid fa-bars"></i>
-              </div>
+            <div className="bar icon" onClick={handleOpenBar}>
+              <i class="fa-solid fa-bars"></i>
+            </div>
 
             <div className="logo">
               <Link to="/" ><img src={newLogo} alt="logo" /></Link>
@@ -140,7 +151,7 @@ const Header = () => {
               <i class="fa-solid fa-cart-shopping"></i>
               <span className='cart-numb'>{cartLength}</span>
             </Link>
-            
+
 
           </div>
 
@@ -152,70 +163,20 @@ const Header = () => {
         <nav class="main-menu">
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li class="menu-item-has-children">
-              <Link to="#">Pressure Cooker</Link>
-              <ul class="sub-menu">
-                <li><Link>Triply Pressure Cooker</Link></li>
-                <li><Link>Triply Hammered Pressure Cooker</Link></li>
-                <li><Link>Stainless Steel Pressure Cooker</Link></li>
-                <li><Link>Genuine Accessories</Link></li>
+            {mainCateg && mainCateg.map((maincat, idx) => (
+              <li key={idx} className="menu-item-has-children">
+                <Link >{maincat.title}</Link>
+                <ul className="sub-menu">
+                  {maincat.SubCategorey.map((subcat, subIdx) => (
+                    <li key={subIdx}>
+                      <Link to={`/ProductBy-Category/${subcat}`}>{subcat}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
 
-              </ul>
-            </li>
-            <li class="menu-item-has-children">
-              <Link to="#">Cast Iron Cookware</Link>
-              <ul class="sub-menu">
-                <li><Link>Kadai</Link></li>
-                <li><Link>Tawa</Link></li>
-                <li><Link>Grill Pan</Link></li>
-                <li><Link>Fry Pan</Link></li>
-                <li><Link>Paniyaram/Appe Pan </Link></li>
-              </ul>
-            </li>
-            <li class="menu-item-has-children">
-              <Link to="#">Triply Cookware</Link>
-              <ul class="sub-menu">
-                <li><Link>All Triply Cookware </Link></li>
-                <li><Link>Kadai</Link></li>
-                <li><Link>Tasla</Link></li>
-                <li><Link>Tope</Link></li>
-                <li><Link>Fry Pan</Link></li>
-                <li><Link>Sauce Pan/Milk pan</Link></li>
-                <li><Link>Tadka Pan</Link></li>
-                <li><Link>Serving Pot</Link></li>
-                <li><Link>Wokpan</Link></li>
-                <li><Link>Tawa</Link></li>
 
-              </ul>
-            </li>
-            <li class="menu-item-has-children">
-              <Link to="#">Steel Cookware</Link>
-              <ul class="sub-menu">
-                <li><Link>All Steel Cookware </Link></li>
-                <li><Link>Kadai</Link></li>
-                <li><Link>Tadka pan </Link></li>
-                <li><Link>Tope</Link></li>
-                <li><Link>Fry Pan</Link></li>
-                <li><Link>Sauce Pan/Milk pan</Link></li>
-                <li><Link>Serving Pot</Link></li>
-                <li><Link>Tasla</Link></li>
-                <li><Link>Tawa</Link></li>
-
-              </ul>
-            </li>
-            
-            <li class="menu-item-has-children">
-              <Link to="#">Combo offers</Link>
-              <ul class="sub-menu">
-                <li><Link>Pressure-cooker Combo</Link></li>
-                <li><Link>Kadai Combo</Link></li>
-                <li><Link>Fry Pan Combo</Link></li>
-                <li><Link>Sauce pan Combo</Link></li>
-                <li><Link>Tope Combo</Link></li>
-                <li><Link>Dinner Thali Combo</Link></li>
-
-              </ul>
-            </li>
           </ul>
         </nav>
       </div>
@@ -236,7 +197,7 @@ const Header = () => {
             <li><Link onClick={handleCloseBar} to="/categories">Shop By Categories <i class="fa-solid fa-arrow-right"></i></Link></li>
 
             {categ.map((item, index) => (
-              <li key={index}><a onClick={handleCloseBar} href={`/ProductBy-Category/${item.title}`}>{item.title} <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li key={index}><Link onClick={handleCloseBar} to={`/ProductBy-Category/${item.title}`}>{item.title} <i class="fa-solid fa-arrow-right"></i></Link></li>
             ))}
 
 
