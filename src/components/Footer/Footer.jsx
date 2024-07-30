@@ -109,7 +109,7 @@ const Footer = () => {
                 <a href="tel:+918595722922 ">+91-8595722922</a>
 
               </p>
-              <p> <strong>Email :</strong>  <a href='mailto:camrocookerpvtltd@gmail.com'>camrocookerpvtltd @gmail.com</a></p>
+              <p> <strong>Email :</strong>  <a href='mailto:camrocookerpvtltd@gmail.com'>camrocookerpvtltd@gmail.com</a></p>
 
             </div>
             <div className="col-md-3">
@@ -129,7 +129,7 @@ const Footer = () => {
                 <a target="_blank" href="https://www.instagram.com/camrosteel?igsh=NmtrZGY3Zms2b2N6" className="icon"><i className="fa-brands fa-instagram"></i></a>
                 <a target="_blank" href="https://www.facebook.com/CamroSteels?mibextid=ZbWKwL" className="icon"><i className="fa-brands fa-square-facebook"></i></a>
                 <a target="_blank" href="https://youtube.com/@utensil_camrosteel?si=Gym2MWKq5WQLtGj8" className="icon"><i className="fa-brands fa-youtube"></i></a>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=919560436691" className="icon"><i className="fa-brands fa-whatsapp"></i></a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=918595722922" className="icon"><i className="fa-brands fa-whatsapp"></i></a>
               </div>
 
             </div>
