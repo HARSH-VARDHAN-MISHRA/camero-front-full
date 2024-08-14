@@ -109,7 +109,7 @@ const Footer = () => {
                 <a href="tel:+918595722922 ">+91-8595722922</a>
 
               </p>
-              <p> <strong>Email :</strong>  <a href='mailto:camrocookerpvtltd@gmail.com'>camrocookerpvtltd@gmail.com</a></p>
+              <p> <strong>Email :</strong>  <a href='mailto:sale.camrosteel@gmail.com'>sale.camrosteel@gmail.com</a></p>
 
             </div>
             <div className="col-md-3">

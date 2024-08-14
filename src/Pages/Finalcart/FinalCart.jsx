@@ -22,7 +22,8 @@ const FinalCart = () => {
 
         }],
         PyamentType: "",
-        TotalAmount: MakeOrder.totalMRP || 0
+        TotalAmount: MakeOrder.finalPrice || 0
+        // TotalAmount: MakeOrder.totalMRP || 0
     })
 
     const handleChange = (e) => {

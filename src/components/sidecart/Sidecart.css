@@ -206,3 +206,50 @@
     color: var(--color-red);
 }
 
+
+.voucher-section{
+    padding: 0.5rem;
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+}
+.voucher-input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-voucher {
+    flex: 1;
+    padding: 5px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+}
+.input-voucher::placeholder{
+    color: black;
+}
+
+.btn-apply-voucher {
+    padding: 0.2rem 0.5rem;
+    background-color: var(--color-red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.voucher-error {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+.voucher-success {
+    color: green;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}

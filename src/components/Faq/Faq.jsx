@@ -11,7 +11,7 @@ const Faq = () => {
     },
     {
         question: "What should I do if I receive a damaged item, wrong product, or missing units in my order?",
-        answer: "If an item is damaged, missing, or incorrect, please send a photo of the outer packaging and products received to our customer care. Reach us at camrocookerpvtltd@gmail.com or call us on 85957 22922 within 7 days of receipt of the product. We will issue either a full refund or send the correct item in exchange, as per your request."
+        answer: "If an item is damaged, missing, or incorrect, please send a photo of the outer packaging and products received to our customer care. Reach us at sale.camrosteel@gmail.com or call us on 85957 22922 within 7 days of receipt of the product. We will issue either a full refund or send the correct item in exchange, as per your request."
     },
     {
         question: "Can I cancel the order?",

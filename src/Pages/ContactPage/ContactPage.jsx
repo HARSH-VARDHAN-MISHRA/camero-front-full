@@ -33,7 +33,7 @@ const ContactPage = () => {
               <div className="contact-info">
                 <p><i>Have questions or feedback? Feel free to reach out to us.</i></p>
                 <ul className="list-unstyled">
-                  <li> Email: <a href="mailto:camrocookerpvtltd@gmail.com" target="_blank">camrocookerpvtltd@gmail.com</a></li>
+                  <li> Email: <a href="mailto:sale.camrosteel@gmail.com" target="_blank">sale.camrosteel@gmail.com</a></li>
                   <li> Phone: <a href="tel:+918595722922">+91-8595722922</a></li>
                   <li> Address: <a href="javascript:void(0)">C-60/2, Wazirpur Industrial Area Delhi-110052</a></li>
                 </ul>
@@ -47,7 +47,7 @@ const ContactPage = () => {
             </div>
             <div className="col-md-6">
               <div className="contact-form">
-                <form action="https://formsubmit.co/camrocookerpvtltd@gmail.com" method="POST">
+                <form action="https://formsubmit.co/sale.camrosteel@gmail.com" method="POST">
                   <div className="form-group">
                     <input type="text" name="Name" id="name" placeholder="Your Name" required />
                   </div>
